@@ -1,5 +1,5 @@
 BASE_ELO = 1600
-MAX_ADJUST = 16 # tweak this to your desire
+MAX_ADJUST = 32 # tweak this to your desire
 
 
 def compare_games(game1, game2):
@@ -109,5 +109,11 @@ for game in games:
         #a tie happened, do nothing for now
         pass
 
+output = []
 for team, score in elo.iteritems():
-    print "%s - %s" % (team, str(int(score)))
+    team_result = "%s - %s" % (team, str(int(score)))
+    output.append(team_result)
+    print team_result
+
+with open('results.txt', 'w') as f: # open the file
+    f.writelines("%s\n" % l for l in output)
