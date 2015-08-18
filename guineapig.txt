@@ -1,0 +1,39 @@
+Winner Auburn with old ELO 1500.000000 new ELO 1534.011974
+Loser MichiganState with old ELO 1500.000000 new ELO 1465.988026
+---------------------------------------
+Winner Auburn with old ELO 1534.011974 new ELO 1562.655218
+Loser WashingtonState with old ELO 1516.094379 new ELO 1487.451135
+---------------------------------------
+Winner Auburn with old ELO 1562.655218 new ELO 1583.019306
+Loser Virginia with old ELO 1452.030486 new ELO 1431.666398
+---------------------------------------
+Winner Clemson with old ELO 1475.173758 new ELO 1511.272324
+Loser Auburn with old ELO 1583.019306 new ELO 1546.920739
+---------------------------------------
+Winner FloridaState with old ELO 1578.178445 new ELO 1592.623521
+Loser Auburn with old ELO 1546.920739 new ELO 1532.475664
+---------------------------------------
+Winner Auburn with old ELO 1532.475664 new ELO 1538.086752
+Loser Arkansas with old ELO 1473.292482 new ELO 1467.681394
+---------------------------------------
+Winner Auburn with old ELO 1538.086752 new ELO 1564.888190
+Loser OleMiss with old ELO 1534.990327 new ELO 1508.188888
+---------------------------------------
+Winner SouthCarolina with old ELO 1496.865161 new ELO 1534.928146
+Loser Auburn with old ELO 1564.888190 new ELO 1526.825205
+---------------------------------------
+Winner LSU with old ELO 1580.731883 new ELO 1599.747590
+Loser Auburn with old ELO 1526.825205 new ELO 1507.809499
+---------------------------------------
+Winner TexasA&M with old ELO 1587.142553 new ELO 1605.092124
+Loser Auburn with old ELO 1507.809499 new ELO 1489.859928
+---------------------------------------
+Winner Tennessee with old ELO 1438.584697 new ELO 1454.858119
+Loser Auburn with old ELO 1489.859928 new ELO 1473.586506
+---------------------------------------
+Winner Auburn with old ELO 1473.586506 new ELO 1496.648983
+Loser Alabama with old ELO 1600.634178 new ELO 1577.571701
+---------------------------------------
+Winner Auburn with old ELO 1496.648983 new ELO 1530.434190
+Loser TexasTech with old ELO 1486.474695 new ELO 1452.689488
+---------------------------------------

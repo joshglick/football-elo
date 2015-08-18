@@ -1,5 +1,9 @@
-BASE_ELO = 1600
-MAX_ADJUST = 32 # tweak this to your desire
+import math
+
+BASE_ELO = 1500
+MAX_ADJUST = 20 # tweak this to your desire
+GUINEA_PIG = 'Auburn'
+USE_MOV = True
 
 
 def compare_games(game1, game2):
@@ -40,14 +44,14 @@ def process_games_data():
     for game in games_data: # for each game in the file
         data = game.strip('"') # remove the quotaion marks on both sides
         data = data.split(' ') # split the line on all of the spaces
-        year = data[YEAR_INDEX]
-        week = data[WEEK_INDEX]
+        year = int(data[YEAR_INDEX])
+        week = int(data[WEEK_INDEX])
         team_one = data[TEAM_ONE_INDEX]
         team_two = data[TEAM_TWO_INDEX]
         scores = data[SCORES_INDEX]
         scores = scores.split('-') # split the scores data on the minues sign
-        score_one = scores[0]
-        score_two = scores[1]
+        score_one = int(scores[0])
+        score_two = int(scores[1])
         games.append((year, week, team_one, score_one, team_two, score_two)) # Add the data into the array
 
     # Now we sort the games
@@ -74,7 +78,7 @@ def get_team_elo(elo, team_name):
         elo[team_name] = BASE_ELO
     return elo[team_name]
 
-def adjust_elo(elo, winner, loser):
+def adjust_elo(elo, winner, loser, mov):
     """
     Adjusts each teams value in the elo dictionary
     :param elo:
@@ -89,11 +93,26 @@ def adjust_elo(elo, winner, loser):
     q_loser = pow(10.0, (r_loser/400.0))
     e_winner = q_winner / (q_winner+q_loser)
     e_loser = q_loser / (q_winner+q_loser)
-    elo[winner] = r_winner + k*(1-e_winner)
-    elo[loser] = r_loser + k*(0-e_loser)
+
+    if USE_MOV:
+        mov_multiplier = math.log(1+abs(mov))*(2.2/(2.2+(0.001*(r_winner-r_loser))))
+    else:
+        mov_multiplier =1
+
+
+    elo[winner] = r_winner + k*mov_multiplier*(1-e_winner)
+    elo[loser] = r_loser + k*mov_multiplier*(0-e_loser)
+
+    # Print out these teams results to look if the data is reanable
+    if winner == GUINEA_PIG or loser == GUINEA_PIG:
+        with open('guineapig.txt', 'a') as f:
+            f.write('Winner %s with old ELO %f new ELO %f\n' % (winner, r_winner, elo[winner]))
+            f.write( 'Loser %s with old ELO %f new ELO %f\n' % (loser, r_loser, elo[loser]))
+            f.write( '---------------------------------------\n')
 
 elo = get_starting_elo()
 games = process_games_data()
+open('guineapig.txt', 'w').close() # clear out guineapig.txt
 for game in games:
     team_one = game[2]
     team_two = game[4]
@@ -101,10 +120,10 @@ for game in games:
     team_two_elo = get_team_elo(elo, team_two)
     if game[3] > game[5]:
         # Team one won
-        adjust_elo(elo, winner=team_one, loser=team_two)
+        adjust_elo(elo, winner=team_one, loser=team_two, mov=game[3]-game[5])
     elif game[3] < game[5]:
         # Team two won
-        adjust_elo(elo, winner=team_two, loser=team_one)
+        adjust_elo(elo, winner=team_two, loser=team_one, mov=game[5]-game[3])
     else:
         #a tie happened, do nothing for now
         pass
@@ -113,7 +132,7 @@ output = []
 for team, score in elo.iteritems():
     team_result = "%s - %s" % (team, str(int(score)))
     output.append(team_result)
-    print team_result
+    #print team_result
 
 with open('results.txt', 'w') as f: # open the file
     f.writelines("%s\n" % l for l in output)
