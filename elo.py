@@ -90,7 +90,11 @@ def get_team_elo(elo, team_name, year=2013):
     :return:
     """
     if team_name not in elo:
-        elo[team_name] = STARTING_ELO[year]
+        if year in STARTING_ELO:
+            elo[team_name] = STARTING_ELO[year]
+        else:
+            elo[team_name] = BASE_ELO
+
     return elo[team_name]
 
 def adjust_elo(elo, winner, loser, mov):
@@ -151,4 +155,4 @@ for team, score in elo.iteritems():
     #print team_result
 
 with open('results.txt', 'w') as f: # open the file
-    f.writelines("%s\n" % l for l in output)
+    f.writelines("%s\n\r" % l for l in output)
