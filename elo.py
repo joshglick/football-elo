@@ -2,8 +2,14 @@ import math
 
 BASE_ELO = 1500
 MAX_ADJUST = 20 # tweak this to your desire
-GUINEA_PIG = 'Auburn'
+GUINEA_PIG = 'MiamiOH'
 USE_MOV = True
+STARTING_ELO = {
+    2013:1500,
+    2014:1500,
+    2015:1450,
+    2016:1450
+}
 
 
 def compare_games(game1, game2):
@@ -67,7 +73,7 @@ def get_starting_elo():
     """
     return {}
 
-def get_team_elo(elo, team_name):
+def get_team_elo(elo, team_name, year=2013):
     """
     Returns the teams elo rating, if the team doesn't exist inserts them in the dictionary and returns the base ELO
     :param elo:
@@ -75,7 +81,7 @@ def get_team_elo(elo, team_name):
     :return:
     """
     if team_name not in elo:
-        elo[team_name] = BASE_ELO
+        elo[team_name] = STARTING_ELO[year]
     return elo[team_name]
 
 def adjust_elo(elo, winner, loser, mov):
@@ -116,8 +122,9 @@ open('guineapig.txt', 'w').close() # clear out guineapig.txt
 for game in games:
     team_one = game[2]
     team_two = game[4]
-    team_one_elo = get_team_elo(elo, team_one)
-    team_two_elo = get_team_elo(elo, team_two)
+    year = game[0]
+    team_one_elo = get_team_elo(elo, team_one, year)
+    team_two_elo = get_team_elo(elo, team_two, year)
     if game[3] > game[5]:
         # Team one won
         adjust_elo(elo, winner=team_one, loser=team_two, mov=game[3]-game[5])

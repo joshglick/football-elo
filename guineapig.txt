@@ -1,39 +1,36 @@
-Winner Auburn with old ELO 1500.000000 new ELO 1534.011974
-Loser MichiganState with old ELO 1500.000000 new ELO 1465.988026
+Winner MiamiOH with old ELO 1450.000000 new ELO 1463.862944
+Loser Buffalo with old ELO 1450.000000 new ELO 1436.137056
 ---------------------------------------
-Winner Auburn with old ELO 1534.011974 new ELO 1562.655218
-Loser WashingtonState with old ELO 1516.094379 new ELO 1487.451135
+Winner MiamiOH with old ELO 1463.862944 new ELO 1488.678250
+Loser WesternMichigan with old ELO 1463.455221 new ELO 1438.639914
 ---------------------------------------
-Winner Auburn with old ELO 1562.655218 new ELO 1583.019306
-Loser Virginia with old ELO 1452.030486 new ELO 1431.666398
+Winner MiamiOH with old ELO 1488.678250 new ELO 1510.722319
+Loser Akron with old ELO 1369.740691 new ELO 1347.696623
 ---------------------------------------
-Winner Clemson with old ELO 1475.173758 new ELO 1511.272324
-Loser Auburn with old ELO 1583.019306 new ELO 1546.920739
+Winner MiamiOH with old ELO 1510.722319 new ELO 1539.849983
+Loser BallState with old ELO 1481.754564 new ELO 1452.626900
 ---------------------------------------
-Winner FloridaState with old ELO 1578.178445 new ELO 1592.623521
-Loser Auburn with old ELO 1546.920739 new ELO 1532.475664
+Winner MiamiOH with old ELO 1539.849983 new ELO 1555.795449
+Loser CentralMichigan with old ELO 1466.634629 new ELO 1450.689163
 ---------------------------------------
-Winner Auburn with old ELO 1532.475664 new ELO 1538.086752
-Loser Arkansas with old ELO 1473.292482 new ELO 1467.681394
+Winner EasternMichigan with old ELO 1417.414616 new ELO 1448.003492
+Loser MiamiOH with old ELO 1555.795449 new ELO 1525.206573
 ---------------------------------------
-Winner Auburn with old ELO 1538.086752 new ELO 1564.888190
-Loser OleMiss with old ELO 1534.990327 new ELO 1508.188888
+Winner MiamiOH with old ELO 1525.206573 new ELO 1557.680868
+Loser Toledo with old ELO 1514.470556 new ELO 1481.996261
 ---------------------------------------
-Winner SouthCarolina with old ELO 1496.865161 new ELO 1534.928146
-Loser Auburn with old ELO 1564.888190 new ELO 1526.825205
+Winner MiamiOH with old ELO 1557.680868 new ELO 1571.461239
+Loser KentState with old ELO 1415.368796 new ELO 1401.588425
 ---------------------------------------
-Winner LSU with old ELO 1580.731883 new ELO 1599.747590
-Loser Auburn with old ELO 1526.825205 new ELO 1507.809499
+Winner MiamiOH with old ELO 1571.461239 new ELO 1591.457007
+Loser BowlingGreen with old ELO 1439.000977 new ELO 1419.005210
 ---------------------------------------
-Winner TexasA&M with old ELO 1587.142553 new ELO 1605.092124
-Loser Auburn with old ELO 1507.809499 new ELO 1489.859928
+Winner MiamiOH with old ELO 1591.457007 new ELO 1602.736410
+Loser Ohio with old ELO 1533.611971 new ELO 1522.332568
 ---------------------------------------
-Winner Tennessee with old ELO 1438.584697 new ELO 1454.858119
-Loser Auburn with old ELO 1489.859928 new ELO 1473.586506
+Winner MiamiOH with old ELO 1602.736410 new ELO 1621.182647
+Loser Toledo with old ELO 1521.300757 new ELO 1502.854520
 ---------------------------------------
-Winner Auburn with old ELO 1473.586506 new ELO 1496.648983
-Loser Alabama with old ELO 1600.634178 new ELO 1577.571701
----------------------------------------
-Winner Auburn with old ELO 1496.648983 new ELO 1530.434190
-Loser TexasTech with old ELO 1486.474695 new ELO 1452.689488
+Winner UCF with old ELO 1474.918097 new ELO 1510.821905
+Loser MiamiOH with old ELO 1621.182647 new ELO 1585.278840
 ---------------------------------------
