@@ -72,11 +72,11 @@ def get_starting_elo():
     :return:
     """
     starting_elo = {}
-    with open('starting-elo.csv', 'r') as f: # open the file
+    with open('starting-elo.csv', 'Ur') as f: # open the file
          starting_data = f.readlines()
     for line in starting_data:
-        team = line.split(',')[0]
-        elo = float(line.split(',')[1])
+        team = line.strip('"').split(',')[0]
+        elo = float(line.strip('"').split(',')[1])
         starting_elo[team] = elo
 
 
