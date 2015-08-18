@@ -2,7 +2,7 @@ import math
 
 BASE_ELO = 1500
 MAX_ADJUST = 20 # tweak this to your desire
-GUINEA_PIG = 'MiamiOH'
+GUINEA_PIG = 'Auburn'
 USE_MOV = True
 STARTING_ELO = {
     2013:1500,
@@ -71,7 +71,16 @@ def get_starting_elo():
     Not implemented yet, for now returns an empty dictionary
     :return:
     """
-    return {}
+    starting_elo = {}
+    with open('starting-elo.csv', 'r') as f: # open the file
+         starting_data = f.readlines()
+    for line in starting_data:
+        team = line.split(',')[0]
+        elo = float(line.split(',')[1])
+        starting_elo[team] = elo
+
+
+    return starting_elo
 
 def get_team_elo(elo, team_name, year=2013):
     """
