@@ -75,9 +75,10 @@ def get_starting_elo():
     with open('starting-elo.csv', 'Ur') as f: # open the file
          starting_data = f.readlines()
     for line in starting_data:
-        team = line.strip('"').split(',')[0]
-        elo = float(line.strip('"').split(',')[1])
-        starting_elo[team] = elo
+        if len(line.strip()) > 0:
+            team = line.strip().strip('"').split(',')[0]
+            elo = float(line.strip().strip('"').split(',')[1])
+            starting_elo[team] = elo
 
 
     return starting_elo
